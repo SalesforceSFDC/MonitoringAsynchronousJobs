@@ -52,3 +52,5 @@ public class UpdateParentAccount implements Queueable {
     
 }
 ```
+
+* Enclosing type for global methods in apex classes must be declared as global
