@@ -20,3 +20,11 @@ static void myFutureMethod(List<String> params) {
 }
 ```
 
+To use Queueable Apex, implement the Queueable interface:
+```Apex
+public class SomeClass implements Queueable { 
+    public void execute(QueueableContext context) {
+        // awesome code here
+    }
+}
+```
