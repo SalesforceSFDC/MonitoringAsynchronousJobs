@@ -5,4 +5,7 @@
 * When system resources become available, the system picks up the next job from the top of the Apex Flex queue and moves it to the batch job queue. The system can process up to five queued or active jobs simultaneously for each organization. The status of these moved jobs changes from Holding to Queued. Queued jobs get executed when the system is ready to process new jobs. Like other jobs, you can monitor queued jobs in the Apex Jobs page.
 
 ## Queueable Apex
+* Queueable Apex is essentially a superset of future methods.
+* It is a mix of Batch Apex and future methods.
+* It is called by `System.enqueueJob()` method.
 
