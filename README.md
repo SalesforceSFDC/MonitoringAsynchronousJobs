@@ -30,3 +30,25 @@ public class SomeClass implements Queueable {
 ```
 
 * `@future` methods are limited to primitive data types.
+* Queueable Apex: The following code takes a collection of Account records, sets the parentId for each record, and then updates the records in the database.
+```Apex
+public class UpdateParentAccount implements Queueable {
+    
+    private List<Account> accounts;
+    private ID parent;
+    
+    public UpdateParentAccount(List<Account> records, ID id) {
+        this.accounts = records;
+        this.parent = id;
+    }
+
+    public void execute(QueueableContext context) {
+        for (Account account : accounts) {
+          account.parentId = parent;
+          // perform other processing or callout
+        }
+        update accounts;
+    }
+    
+}
+```
