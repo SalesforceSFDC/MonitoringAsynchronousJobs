@@ -7,5 +7,6 @@
 ## Queueable Apex
 * Queueable Apex is essentially a superset of future methods.
 * It is a mix of Batch Apex and future methods.
-* It is called by `System.enqueueJob()` method.
+* It is called by `System.enqueueJob()` method, which returns a job ID that you can monitor.
+* Monitoring: When you submit your job by invoking the `System.enqueueJob` method, the method returns the ID of the `AsyncApexJob` record. You can use this ID to identify your job and monitor its progress, either through the Salesforce user interface in the Apex Jobs page, or programmatically by querying your record from `AsyncApexJob`.
 
